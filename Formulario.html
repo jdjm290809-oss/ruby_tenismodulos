@@ -1,42 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto</title>
-</head>
+<form 
+    name="clientes" 
+    method="POST" 
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    action="/gracias.html">
 
-<body>
+    <input type="hidden" name="form-name" value="clientes">
 
-    <h1>Formulario de Contacto</h1>
+    <p hidden>
+        <label>
+            No llenar:
+            <input name="bot-field">
+        </label>
+    </p>
 
-    <form 
-        name="clientes" 
-        method="POST" 
-        data-netlify="true"
-        action="/gracias.html">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
 
-        <input type="hidden" name="form-name" value="clientes">
+    <label for="correo">Correo:</label><br>
+    <input type="email" id="correo" name="correo" required><br><br>
 
-        <p hidden>
-            <label>
-                No llenar:
-                <input name="bot-field">
-            </label>
-        </p>
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" required></textarea><br><br>
 
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+    <button type="submit">Enviar</button>
 
-        <label for="correo">Correo:</label><br>
-        <input type="email" id="correo" name="correo" required><br><br>
-
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br><br>
-
-        <button type="submit">Enviar</button>
-
-    </form>
-
-</body>
-</html>
+</form>
